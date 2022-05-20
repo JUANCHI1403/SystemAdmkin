@@ -2,35 +2,30 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegistrerComponent } from './auth/registrer/registrer.component';
-import { NopagefoundComponent } from './pages/nopagefound/nopagefound.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
-import { SiderbarComponent } from './shared/siderbar/siderbar.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { Grafica1Component } from './pages/grafica1/grafica1.component';
+
+import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+
 import {AppRoutingModule} from "./app-routing.module";
-import { PagesComponent } from './pages/pages.component';
+import {PagesModule} from "./pages/pages.module";
+import {AuthModule} from "./auth/auth.module";
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegistrerComponent,
     NopagefoundComponent,
-    DashboardComponent,
-    BreadcrumbsComponent,
-    SiderbarComponent,
-    HeaderComponent,
-    ProgressComponent,
-    Grafica1Component,
-    PagesComponent
+
+
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PagesModule,
+    AuthModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
